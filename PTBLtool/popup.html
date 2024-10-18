@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- <title>My Google Extension</title> -->
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    input {
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #currentWeb {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    #submitBtn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #submitBtn:hover {
+      background-color: #45a049;
+    }
+    .fab {
+      font-size: 24px; 
+      margin-right: 3px; 
+      margin-left: 3px;
+      color: #333; 
+    }
+    .fa {
+      font-size: 24px; 
+      margin-right: 3px; 
+      margin-left: 3px;
+      color: #333; 
+    }
+    .fab:hover {
+      cursor: pointer;
+    }
+    .fa:hover {
+      cursor: pointer;
+    }
+    .footer {
+      margin-top: 10px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .inputflex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .labelflex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .labelflex span{
+      margin-bottom: 10px;
+    }
+  </style>
+  <script src="popup.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <h2>高醫TBL/PBL互評小工具</h2>
+  <div style="font-weight: bold;">
+    當前網站:
+  </div>
+  <div id="currentWeb">
+    網站
+  </div>
+  <div style="font-weight: bold;">
+    表單模式:
+  </div>
+  <div class="labelflex">
+    <label>
+      <input type="radio" id="pblmode" name="evaluationType" value="PBL" checked>
+    </label>
+    <span>PBL</span>
+    <label>
+      <input type="radio" id="tblmode" name="evaluationType" value="TBL">
+    </label>
+    <span>TBL</span>
+  </div>
+  <div class="inputflex">
+    <input type="text" id="input1" value="" placeholder="輸入學號: 110001047">
+    <!-- <input type="text" id="input2" value="" placeholder="輸入組別: B3"> -->
+    <input type="text" id="input3" value="" placeholder="輸入評分: 10">
+  </div>
+  <input type="text" id="input4" value="" placeholder="輸入回傳確認信箱">
+  <button id="submitBtn">自動填入(不送出)</button>
+  <div class="footer">
+   <i id="GoToGithub" class="fab fa-github"></i> 
+   <i id="GoToFB" class="fab fa-facebook"></i>
+   <i id="GoToKMU" class="fa solid fa-globe"></i>
+  </div>
+</body>
+</html>
