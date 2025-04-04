@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
         currentWeb.textContent =tabs[0].title;
     });
 
-    //這裡是測試用的
+    // 這裡是測試用的
     // submitBtn.addEventListener('click', function() {
 
     //     var message = {
     //         action: 'getForm',
     //         additionalData: {
-    //             param1: "B7",
-    //             param2: "B-7",
+    //             param1: "A4",
+    //             param2: "A-4",
     //             param3: '110001047',
     //             param4: 'tonychen8382@gmail.com',
     //             param5: '10',
-    //             param6: "TBL"
+    //             param6: "PBL"
     //         }
     //     };
         

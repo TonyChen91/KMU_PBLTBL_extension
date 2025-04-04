@@ -16,15 +16,15 @@ var group3 = "A2";
 //直接偵測學號代表哪一組
 function FindGroup(stnumberX){
     var urcode= document.querySelector('[data-form-name] select option[value*="' + stnumberX + '"]');  
-    // console.log(urcode.value, typeof urcode.value);
-    var group3arr = urcode.value.match(/[A-Z]-\d+/);
+    console.log(urcode.value, typeof urcode.value); //
+    var group3arr = urcode.value.match(/[A-Z]-?\d+/); ///以前是抓[A-Z]-\d+/  例如A-4組
     group4= group3arr[group3arr.length-1];
-    // console.log(group4, typeof group4);
+    console.log(group4, typeof group4); //
     group3= group4.replace("-","");
-    console.log("你是: "+group3+"組");
+    // console.log("你是: "+group3+"組"); //
 }
 
-
+//TBL
 function GetT(group_, group2_, stnumber_, mail_, score_){
 
     console.log("正在執行TBL表單填寫");
@@ -158,7 +158,7 @@ function GetT(group_, group2_, stnumber_, mail_, score_){
     }
 }
 
-
+//PBL
 function GetE(group_, group2_, stnumber_, mail_, score_){  
     console.log("正在執行PBL表單填寫");
     //參數設定
@@ -182,7 +182,7 @@ function GetE(group_, group2_, stnumber_, mail_, score_){
             uniClassmates.add(classmate.value);
         }   
     });
-    // console.log(uniClassmates);
+    console.log(uniClassmates);//
     
     //組別教師出席和評分
     var options= document.querySelectorAll('[data-form-name] select option');
